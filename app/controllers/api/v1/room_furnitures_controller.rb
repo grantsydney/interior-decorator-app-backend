@@ -27,7 +27,7 @@ class Api::V1::RoomFurnitureFurnituresController < ApplicationController
 
   private
   def roomfurniture_params
-    params.permit(:room_id, :furniture_id, :x_cord, :y_cord)
+    params.permit(:room_id, :furniture_id, :x_coord, :y_coord)
   end
 
   def find_roomfurniture

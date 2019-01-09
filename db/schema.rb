@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2019_01_09_155421) do
   create_table "room_furnitures", force: :cascade do |t|
     t.integer "room_id"
     t.integer "furniture_id"
-    t.integer "x_cord"
-    t.integer "y_cord"
+    t.integer "x_coord"
+    t.integer "y_coord"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

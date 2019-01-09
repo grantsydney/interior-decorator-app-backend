@@ -13,4 +13,4 @@ r1 = Room.create(name: 'Living Room', dimension1: 700, dimension2: 900, user_id:
 
 f1 = Furniture.create(name: 'Bed Frame', category: 'bedroom', description: 'glossy finish bed frame', color: 'white', img: 'white-bed-frame.png', img_sketch: 'white-bed-frame-sketch.png', dimension1: 20, dimension2: 60)
 
-rf1 = RoomFurniture.create(room_id: 1, furniture_id: 1, x_cord: 430, y_cord: 400)
+rf1 = RoomFurniture.create(room_id: 1, furniture_id: 1, x_coord: 430, y_coord: 400)
