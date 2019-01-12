@@ -23,7 +23,7 @@ class Api::V1::RoomFurnitureFurnituresController < ApplicationController
   def destroy
     @roomfurniture.destroy
     render json: {message: "roomfurniture deleted"}, status: :ok
-  end
+  end 
 
   private
   def roomfurniture_params

@@ -1,4 +1,4 @@
-aclass Api::V1::FurnituresController < ApplicationController
+class Api::V1::FurnituresController < ApplicationController
 
   before_action :find_furniture, only: [:show, :destroy]
 
@@ -27,6 +27,12 @@ aclass Api::V1::FurnituresController < ApplicationController
       render json: {message: "furniture deleted"}, status: :ok
     end
 
+    def user_furnitures
+      @user = User.find_by(id: params["user_id"])
+      @user_furnitures = @user.furnitures
+      render json: @user_furnitures, status: :ok
+    end
+
     private
 
     def furniture_params
@@ -36,15 +42,4 @@ aclass Api::V1::FurnituresController < ApplicationController
     def find_furniture
       @furniture = Furniture.find(params[:id])
     end
-
-
-
-
-
-
-
-
-
-
-
 end
