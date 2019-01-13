@@ -9,6 +9,8 @@ Rails.application.routes.draw do
           resources :rooms
           resources :furnitures
           get '/user_furnitures', to: "furnitures#user_furnitures"
+          # post '/user_furnitures', to: "furnitures#create"
+
         end
       end
     end

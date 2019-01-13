@@ -33,10 +33,21 @@ class Api::V1::FurnituresController < ApplicationController
       render json: @user_furnitures, status: :ok
     end
 
+    # def create_user_furniture
+    #   @furniture = Furniture.create(furniture_params)
+    #   if @furniture.valid?
+    #     render json: @furniture, status: :created
+    #   else
+    #     render json: @furniture.errors.full_messages, status: :unprocessable_entity
+    #   end
+    # end
+
     private
 
     def furniture_params
+      # params.permit(:romm_id, :id, :x_coord, :y_coord)
       params.permit(:name, :category, :description, :color, :img, :img_sketch, :dimension1, :dimension2)
+
     end
 
     def find_furniture
