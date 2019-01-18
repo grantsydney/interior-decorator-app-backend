@@ -27,6 +27,11 @@ class Api::V1::UsersController < ApplicationController
     render json: @user
   end
 
+  def destroy
+    @user.destroy
+    render json: ['message': "User deleted"]
+  end
+
   private
 
   private
