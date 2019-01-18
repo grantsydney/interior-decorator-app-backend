@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   namespace :api do
       namespace :v1 do
         resources :furnitures
-        resources :users, only: [:index, :show] do
+        post '/login', to: 'auth#create'
+        get '/profile', to: 'users#profile'
+        resources :users, only: [:index, :show, :create]  do
           resources :rooms
           resources :furnitures
           get '/user_furnitures', to: "furnitures#user_furnitures"
@@ -13,7 +15,6 @@ Rails.application.routes.draw do
           get '/room_furniture/:id', to: "room_furnitures#users_current_room_furniture"
           patch '/room_furniture/:id', to: "room_furnitures#update"
           # post '/create_user_furniture', to: "furnitures#create_user_furniture"
-
         end
       end
     end
