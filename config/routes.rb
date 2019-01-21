@@ -12,6 +12,7 @@ Rails.application.routes.draw do
           post '/room_furniture', to: "room_furnitures#create"
           get '/room_furniture/:id', to: "room_furnitures#users_current_room_furniture"
           patch '/room_furniture/:id', to: "room_furnitures#update"
+          delete '/room_furniture/:id', to: "room_furnitures#destroy_user_furniture"
           # post '/create_user_furniture', to: "furnitures#create_user_furniture"
 
         end
