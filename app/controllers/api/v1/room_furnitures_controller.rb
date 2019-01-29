@@ -32,8 +32,9 @@ class Api::V1::RoomFurnituresController < ApplicationController
     end
   end
 
-  def destroy
-    @room_furniture.destroy
+  def destroy_user_furniture
+    @room_furniture = RoomFurniture.where(id: params[:id])
+    @room_furniture.destroy(params[:id])
     render json: {message: "room_furniture deleted"}, status: :ok
   end
 
