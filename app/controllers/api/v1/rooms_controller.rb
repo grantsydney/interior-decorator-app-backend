@@ -21,16 +21,6 @@ class Api::V1::RoomsController < ApplicationController
     end
   end
 
-  #don't need for MVP
-  # def update
-  #   @room.update(room_params)
-  #   if @room.save
-  #     render json: @room, status: :accepted
-  #   else
-  #     render json: { errors: @room.errors.full_messages }, status: :unprocessible_entity
-  #   end
-  # end
-
   def destroy
     @room.destroy
     render json: {message: "room deleted"}, status: :ok
