@@ -1,4 +1,3 @@
-
 class Api::V1::FurnituresController < ApplicationController
 
   before_action :find_furniture, only: [:show, :destroy]

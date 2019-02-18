@@ -1,5 +1,5 @@
 class Api::V1::RoomFurnituresController < ApplicationController
-  before_action :find_roomfurniture, only: [:index]
+  before_action :find_roomfurniture, only: [:index, :destroy]
 
   def index
     @room_furnitures = RoomFurniture.all
